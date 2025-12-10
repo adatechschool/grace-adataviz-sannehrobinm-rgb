@@ -1,0 +1,106 @@
+/* Font Toulouse-Lautrec */
+@font-face {
+  font-family: "Toulouse-Lautrec";
+  src: url("./fonts/toulouse-lautrec.woff2") format("woff2"),
+       url("./fonts/toulouse-lautrec.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --bg: #242424;
+  --txt: #fff;
+  --accent: #f39c12;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "Toulouse-Lautrec", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--txt);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Toulouse-Lautrec", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.search-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.search-group input {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background: #333;
+  color: #fff;
+}
+.search-group button {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+.search-group button:hover { background: #e67e22; }
+
+#resultat {
+  width: 90%;
+  max-width: 900px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1100px;
+  gap: 12px;
+}
+
+#sidebar {
+  width: 220px;
+  background: #333;
+  border-radius: 8px;
+  padding: 10px;
+  max-height: 520px;
+  overflow-y: auto;
+}
+.sidebar-item {
+  padding: 6px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #444;
+  color: #fff;
+  font-size: 0.9rem;
+}
+.sidebar-item:hover { background: var(--accent); }
+
+#geo-container {
+  flex: 1;
+  height: 520px;
+  border-radius: 8px;
+  border: 2px solid #333;
+}
+
+.photo-marker img {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  width: 70px;
+  height: 70px;
+}

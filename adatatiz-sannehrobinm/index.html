@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parisiennes Illustres</title>
+
+  <!-- CSS local + Leaflet -->
+  <link rel="stylesheet" href="./src/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <h1>Parisiennes Illustres</h1>
+
+  <div class="search-group">
+    <input type="text" id="searchInput" placeholder="Nom ou adresse " />
+    <button id="boutonRecherche">Rechercher</button>
+  </div>
+
+  <div id="resultat"></div>
+
+  <div class="container">
+    <div id="sidebar"></div>
+    <div id="geo-container"></div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
